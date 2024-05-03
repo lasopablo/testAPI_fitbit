@@ -1,13 +1,32 @@
-# Pair programming exercise
+# Fitbit Activity Tracker API
 
-## Installation guide
+This project demonstrates a robust implementation of a RESTful API using FastAPI to interact with the Fitbit API for fetching and storing user activity data. This project is designed to showcase back-end skills in building scalable, maintainable APIs with Python.
 
-Before installation, you must have Python 3.10-3.12 and Poetry already installed in your system.
+## Project Features
+
+- **Fitbit API Integration**: Connects with Fitbit to retrieve 7 days of historical activity data.
+- **Efficient Data Handling**: Implements endpoints to fetch and store data efficiently in a scalable manner.
+- **Interactive API Documentation**: Utilizes FastAPI's automatic Swagger UI and Redoc to provide clear and interactive API documentation.
+
+## Technologies Used
+
+- FastAPI
+- Python 3.10 - 3.12
+- Poetry for dependency management
+
+## Getting Started
+
+### Prerequisites
+
+Before installation, ensure you have Python 3.10-3.12 and Poetry installed on your system.
+
+### Installation
+
+Set up a virtual environment and install dependencies using Poetry:
 
 ```bash
 poetry shell
 poetry install
-```
 
 ### Running the API
 
@@ -24,14 +43,14 @@ INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 ```
 
-#### Useful resources
 
-Things FastAPI gives you out-of-the-box:
+### API Documentation
 
-* Swagger UI (http://127.0.0.1:8000/docs) with API Playground.
-* Redoc (http://127.0.0.1:8000/redoc) for a prettier look at the OpenAPI schema.
+Explore the API:
+- **Swagger UI**: Interactive API playground at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+- **Redoc**: Enhanced API documentation at [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
 
-## Project structure
+## Project Structure
 
 ```
 tryvital
@@ -44,24 +63,21 @@ tryvital
 └── main.py
 ```
 
-### Exercise Goal
 
-There are two deliverables:
+## Key parts
 
-1. Implement the callback endpoint: `POST /v1/fitbit/connect/{vital_user_id}`
-  * It should fetch 7 days worth of (historical) activity daily summary data from Fitbit API.
-  * It should then store it in a method of your own choice.
+1. **Callback Endpoint**:
+   - `POST /v1/fitbit/connect/{vital_user_id}`
+   - Fetches and stores 7 days of historical activity data from Fitbit.
 
-2. Implement the query endpoint: `GET /v1/activity`
-  * It should query the activity daily summary data being stored in Deliverable 1.
-  * The result must be filtered in accordance to the input date range.
-  * The date range should be start inclusive and end inclusive.
+2. **Query Endpoint**:
+   - `GET /v1/activity`
+   - Queries stored activity data based on user-specified date ranges.
 
-Notes:
+## Further Information
 
-* This exercise does not involve going through the actual Fitbit OAuth flow.
-* Fitbit API documentation: Get Daily Activity Summary
-  * https://dev.fitbit.com/build/reference/web-api/activity/get-daily-activity-summary/
-* A valid Fitbit API access token would be provided by the interviewer at the start of the session.
+- This project does not involve the actual OAuth flow with Fitbit.
+- Refer to [Fitbit's Activity Summary API](https://dev.fitbit.com/build/reference/web-api/activity/get-daily-activity-summary/) for more details.
 
 ![Flow Diagram](/flow-diagram.png)
+
