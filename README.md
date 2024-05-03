@@ -30,6 +30,8 @@ Set up a virtual environment and install dependencies using Poetry:
 ```bash
 poetry shell
 poetry install
+```
+
 
 ### Running the API
 
