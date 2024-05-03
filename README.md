@@ -2,6 +2,9 @@
 
 This project demonstrates a robust implementation of a RESTful API using FastAPI to interact with the Fitbit API for fetching and storing user activity data. This project is designed to showcase back-end skills in building scalable, maintainable APIs with Python.
 
+![Screenshot_GUI](/Screenshot_GUI.png)
+
+
 ## Project Features
 
 - **Fitbit API Integration**: Connects with Fitbit to retrieve 7 days of historical activity data.
@@ -80,4 +83,3 @@ tryvital
 - Refer to [Fitbit's Activity Summary API](https://dev.fitbit.com/build/reference/web-api/activity/get-daily-activity-summary/) for more details.
 
 ![Flow Diagram](/flow-diagram.png)
-
